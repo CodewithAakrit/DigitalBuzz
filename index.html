@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DigitalBuzz | Real Estate Marketing Agency</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="DigitalBuzz is a premium real estate marketing agency specializing in high-converting campaigns and project branding.">
+    <meta name="keywords" content="Real Estate Marketing, Digital Buzz, Property Marketing, Hyderabad Real Estate">
+    <meta name="author" content="DigitalBuzz">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/image6.png">
+
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-container">
+
+        <!-- LOGO -->
+        <a href="/" class="logo">
+            <img src="images/logo.png" alt="DigitalBuzz Real Estate Marketing">
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#results-section" class="nav-item">Our Results</a>
+            <a href="#projects" class="nav-item">Hyderabad Projects</a>
+            <a href="#whyus" class="nav-item">Why Us</a>
+            <a href="#about" class="nav-item">About Us</a>
+
+            <!-- CTA BUTTON -->
+            <a href="javascript:void(0)" class="hero-btn nav-item" onclick="openPopup()">
+                <i class="fa-solid fa-phone"></i> Book A Call
+            </a>
+        </nav>
+
+        <!-- MOBILE HAMBURGER -->
+        <button class="hamburger" id="hamburger" aria-label="Open Mobile Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+
+
+<section id="hero" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+
+        <div class="hero-text-box">
+            <h1 class="hero-heading animate-text">
+                Stop Wasting Money on <span>Low-Quality Leads!</span>
+            </h1>
+
+            <p class="hero-sub">
+                Are you a real estate channel partner tired of wasting money on
+                unqualified leads? At DigitalBuzz, we specialize in generating
+                high-quality, ready-to-buy homebuyer leads.
+                Let’s help you connect with real buyers and close more deals!
+            </p>
+
+            <a href="javascript:void(0)" class="hero-btn" onclick="openPopup()">
+
+                <i class="fa-solid fa-phone"></i> Book A Call
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="results-section" id="results-section">
+    <div class="results-container">
+
+        <h2 class="results-title">Our Results</h2>
+        <div class="results-title-line"></div>
+
+        <p class="results-sub">
+            We don't just deliver leads. We deliver measurable closing potential. 
+            Our proven, specialized approach turned ad spend into guaranteed 
+            site visits and bookings for many channel partners. You can see our numbers.
+        </p>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+                <div class="result-value">72%</div>
+                <div class="result-label">QUALIFIED LEADS</div>
+                <div class="result-underline"></div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-value">16 Lacs+</div>
+                <div class="result-label">LEADS GENERATED</div>
+                <div class="result-underline"></div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-value">25,000+</div>
+                <div class="result-label">CAMPAIGNS MANAGED</div>
+                <div class="result-underline"></div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-value">42 Cr+</div>
+                <div class="result-label">ADS SPENT</div>
+                <div class="result-underline"></div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-value">1200+</div>
+                <div class="result-label">CHANNEL PARTNERS</div>
+                <div class="result-underline"></div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="hyd-sec">
+
+    <h2 class="section-title">Active Hyderabad Projects</h2>
+
+    <div class="hyd-layout">
+
+        <!-- LEFT SIDE -->
+        <div class="hyd-left">
+            <p class="tagline">
+                Our specialized strategy & targeting is generating high-intent site visits for these projects right now.
+            </p>
+
+            <p class="question">
+                Are you focusing on generating leads for these same projects, or another in the Hyderabad market?
+            </p>
+
+            <p class="desc">
+                With performance data from these specific projects, we target genuine home buyers with far better accuracy.
+                This reduces CPL and increases site visits efficiently.<br><br>
+                Let’s capitalize on this intelligence for your business.
+            </p>
+
+            <button class="hyd-btn" onclick="openPopup()">Book A Call</button>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hyd-right">
+            <div class="hyd-slider" id="hydSlider">
+                <div class="hyd-track">
+
+                    <div class="hyd-card">
+                        <img src="images/image1.png" alt="">
+                        <h3>Godrej Regal Pavilion</h3>
+                        <p><strong>Location:</strong> Rajendra Nagar</p>
+                        <p><strong>Lead Quality Ratio:</strong> 82%</p>
+                    </div>
+
+                    <div class="hyd-card">
+                        <img src="images/image5.png" alt="">
+                        <h3>Urbanrise Sky Habitat</h3>
+                        <p><strong>Location:</strong> Miyapur</p>
+                        <p><strong>Lead Quality Ratio:</strong> 77%</p>
+                    </div>
+
+                    <div class="hyd-card">
+                        <img src="images/image3.png" alt="">
+                        <h3>Brigade Gateway</h3>
+                        <p><strong>Location:</strong> Kokapet</p>
+                        <p><strong>Lead Quality Ratio:</strong> 80%</p>
+                    </div>
+
+                    <div class="hyd-card">
+                        <img src="images/image2.png" alt="">
+                        <h3>Sumadhura Palais Royale</h3>
+                        <p><strong>Location:</strong> Khajaguda</p>
+                        <p><strong>Lead Quality Ratio:</strong> 74%</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="whyus" id="whyus">
+    <div class="whyus-container">
+
+        <!-- HEADING -->
+        <h2 class="whyus-heading">Why Choose DigitalBuzz?</h2>
+        <div class="whyus-line"></div>
+
+        <p class="whyus-sub">
+            You need a partner, not a vendor. Channel partners choose us because we don't just run ads – 
+            we deliver results strictly for the real estate domain.
+        </p>
+
+        <!-- WRAPPER FOR MOBILE SLIDER -->
+        <div class="whyus-wrapper">
+
+            <div class="whyus-cards" id="whyusSlider">
+
+                <div class="whyus-card">
+                    <div class="whyus-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Real Estate Expertise</h3>
+                    <p>Hyper-focused in real estate, ensuring premium quality.</p>
+                </div>
+
+                <div class="whyus-card">
+                    <div class="whyus-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Channel Partner Focus</h3>
+                    <p>We know your workflow and what generates site visits.</p>
+                </div>
+
+                <div class="whyus-card">
+                    <div class="whyus-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Proven Track Record</h3>
+                    <p>Thousands of campaigns executed with high ROI.</p>
+                </div>
+
+                <div class="whyus-card">
+                    <div class="whyus-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Advanced Technology</h3>
+                    <p>AI-powered targeting for improved conversions.</p>
+                </div>
+
+              
+
+            </div>
+        </div>
+
+      
+
+    </div>
+</section>
+
+<div class="popup-overlay" id="popupForm">
+    <div class="popup-box">
+        <button class="popup-close" id="popupClose">&times;</button>
+
+        <img src="images/logo.png" class="popup-logo" />
+
+        <h2>Get In Touch</h2>
+        <p>Enter your details, our team will contact you…</p>
+
+        <form class="popup-form" action="send_mail.php" method="POST">
+            <input type="hidden" name="form_type" value="popup">
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Business Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="location" placeholder="Location" required>
+            <input type="text" name="business" placeholder="Business Name" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+<section class="about-digitalbuzz" id="about">
+    <div class="about-container">
+
+        <!-- LEFT SIDE BOX -->
+        <div class="about-left">
+            <div class="about-left-box">
+
+                <h2 class="about-heading">About DigitalBuzz</h2>
+                <div class="about-line"></div>
+
+                <p class="about-text">
+                    DigitalBuzz is a leading real estate marketing agency dedicated exclusively to generating 
+                    high-quality homebuyer leads for real estate channel partners. We leverage years of deep 
+                    specialization in Meta and Google Ads, operating with a single mission: to optimize your 
+                    closing potential and deliver a proven return on investment (ROI).
+                </p>
+
+                <p class="about-text">
+                    While we run hyper-local campaigns in high-growth markets like Hyderabad, our strategic reach is national.
+                </p>
+
+                <p class="about-text strong">
+                    <strong>Our Operational Hubs:</strong> Pune (HQ), Mumbai, Bangalore, Gurgaon, Noida.
+                </p>
+
+                <p class="about-text">
+                    Ready to discuss your Hyderabad lead needs? Our team is ready to prepare a strategic 
+                    assessment for your top projects.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE FORM BOX -->
+        <div class="about-right">
+            <div class="about-form-box">
+
+                <h3 class="form-title">Contact Us</h3>
+                <p class="form-sub">
+                    Enter your details and our team will get in touch with you.
+                </p>
+
+                <form action="send_mail.php" method="POST" class="about-form">
+
+    <input type="hidden" name="form_type" value="contact">
+
+    <input type="text" name="name" placeholder="Name" required>
+
+    <input type="email" name="email" placeholder="Business Email" required>
+
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <input type="text" name="location" placeholder="Location" required>
+
+    <input type="text" name="business" placeholder="Business Name" required>
+
+    <button type="submit" class="about-submit-btn">
+        Submit
+    </button>
+</form>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-top">
+        <!-- LOGO -->
+        <img src="images/logo.png" class="footer-logo" alt="DigitalBuzz Logo">
+
+        <!-- SOCIAL ICONS -->
+        <div class="footer-social">
+            <a href="https://www.facebook.com/people/DigitalBuzz/61558789752251/" target="_blank">
+                <img src="images/image9.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/digitalbuzz_re/" target="_blank">
+                <img src="images/image4.png" alt="Instagram">
+            </a>
+            <a href="https://in.linkedin.com/company/digitalbuzzofficial" target="_blank">
+                <img src="images/image8.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <p class="footer-disclaimer">
+        <strong>Disclaimer:</strong> I authorize DigitalBuzz (DigitalB LLP) and its representatives 
+        to Call, SMS, Email or WhatsApp me about their products, services and offers.
+        This consent overrides any registration for DNC / NDNC.
+    </p>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        <p>© 2025 <strong>DigitalB LLP</strong>. All Rights Reserved.</p>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="termandcondition.html">Terms & Conditions</a>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

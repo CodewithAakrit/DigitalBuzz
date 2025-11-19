@@ -1,0 +1,179 @@
+/* style.css - White & Yellow Theme for Policy Pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: #ffffff;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffd84d;
+    outline: 6px solid #fff7cc;
+    outline-offset: 4px;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #1a1a1a;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+p, li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Subtle highlight block */
+.container p strong {
+    background: #fff3a6;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+.footer {
+    width: 100%;
+    background: #ffffff;
+    border-top: 3px solid #FFD700;
+    padding: 60px 0 30px;
+    text-align: center;
+    color: #000;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* TOP AREA */
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* LOGO */
+.footer-logo {
+    height: 70px;
+    width: auto;
+}
+
+/* CLEAN SOCIAL ICONS – PURE IMAGE ONLY */
+.footer-social {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social a img {
+    height: 28px;   /* clean size */
+    width: 28px;
+    object-fit: contain;
+}
+
+/* DISCLAIMER */
+.footer-disclaimer {
+    max-width: 850px;
+    margin: 35px auto;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    padding: 0 20px;
+}
+
+/* BOTTOM ROW */
+.footer-bottom {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+}
+
+/* LINKS */
+.footer-links {
+    display: flex;
+    gap: 15px;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}

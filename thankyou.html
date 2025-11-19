@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You - DigitalBuzz</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: "Poppins", Arial, sans-serif;
+    }
+
+    body{
+        background:#fffbea;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:100vh;
+        padding:20px;
+    }
+
+    .thankyou-box{
+        width:100%;
+        max-width:600px;
+        background:#ffffff;
+        padding:40px 30px;
+        border-radius:16px;
+        border:3px solid #ffd84d;
+        outline:6px solid #fff3a6;
+        outline-offset:4px;
+        text-align:center;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        animation:fadeUp .5s ease;
+    }
+
+    @keyframes fadeUp {
+        from { opacity:0; transform:translateY(20px); }
+        to { opacity:1; transform:translateY(0); }
+    }
+
+    .logo{
+        width:90px;
+        height:90px;
+        margin:0 auto 15px auto;
+        border-radius:12px;
+        background:#fff3a6;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:0 6px 20px rgba(255,200,40,0.20);
+        overflow:hidden;
+    }
+
+    /* You will add your logo image here */
+    .logo img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    h1{
+        font-size:28px;
+        font-weight:700;
+        margin-bottom:10px;
+        color:#222;
+    }
+
+    p{
+        font-size:15px;
+        color:#555;
+        margin-bottom:25px;
+        line-height:1.6;
+    }
+
+    a.button{
+        display:inline-block;
+        padding:12px 22px;
+        background:#ffd84d;
+        color:#111;
+        text-decoration:none;
+        font-weight:600;
+        border-radius:12px;
+        box-shadow:0 6px 18px rgba(255,200,40,0.25);
+        transition:0.2s ease;
+    }
+
+    a.button:hover{
+        transform:translateY(-3px);
+    }
+</style>
+
+</head>
+<body>
+
+<div class="thankyou-box">
+
+    <!-- Add your image inside the logo div -->
+    <div class="logo">
+         <img src="images/image6.png"> 
+    </div>
+
+    <h1>Thank You!</h1>
+    <p>Your form has been successfully submitted.  
+       Our team will contact you shortly.</p>
+
+    <a href="index.html" class="button">Return to Home</a>
+
+</div>
+
+</body>
+</html>
