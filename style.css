@@ -831,6 +831,9 @@ section {
 /* ----------------------------------------------------
    POPUP OVERLAY
 ---------------------------------------------------- */
+/* ----------------------------------------------------
+   POPUP OVERLAY
+---------------------------------------------------- */
 .popup-overlay {
     position: fixed;
     inset: 0;
@@ -842,106 +845,98 @@ section {
     padding: 20px;
 }
 
-/* Show Popup */
 .popup-overlay.active {
     display: flex;
 }
 
 /* ----------------------------------------------------
-   POPUP BOX (NON SCROLLABLE)
+   POPUP BOX (NON-SCROLLABLE & BUTTON VISIBLE)
 ---------------------------------------------------- */
 .popup-box {
     width: 90%;
     max-width: 420px;
     background: #ffffff;
-    border-radius: 20px;
-    padding: 30px 28px;
+    border-radius: 18px;
+    padding: 22px 24px;                   /* reduced padding */
     box-shadow: 0 22px 42px rgba(0,0,0,0.25);
     border: 3px solid #FFD700;
     animation: popupShow 0.35s ease;
     position: relative;
 
-    /* NON-SCROLL FIX */
-    max-height: 85vh;       /* fits inside screen */
-    overflow: hidden;       /* prevent scrolling */
+    max-height: 88vh;                     /* increased height */
+    overflow: hidden;                     /* NO scroll */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
-/* ANIMATION */
 @keyframes popupShow {
     0% { transform: translateY(-15px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* LOGO */
+/* ----------------------------------------------------
+   ELEMENTS
+---------------------------------------------------- */
 .popup-logo {
-    width: 110px;
-    display: block;
-    margin: 0 auto 12px;
+    width: 100px;
+    margin: 0 auto 10px;
 }
 
-/* CLOSE BUTTON */
 .popup-close {
     position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 28px;
+    top: 10px;
+    right: 16px;
+    font-size: 26px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-/* HEADING */
 .popup-box h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;                      /* slightly smaller */
     font-weight: 800;
-    font-family: "Playfair Display", serif;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-/* SUBTEXT */
 .popup-box p {
     text-align: center;
     font-size: 15px;
     color: #4a4a4a;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    margin-bottom: 15px;                  /* reduced gap */
+    line-height: 1.4;
 }
 
-/* FORM (NO SCROLL) */
+/* ----------------------------------------------------
+   FORM AREA (ENFORCE SPACE FOR BUTTON)
+---------------------------------------------------- */
 .popup-form {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
-/* INPUTS */
+/* Inputs */
 .popup-form input {
     width: 100%;
-    padding: 14px;
+    padding: 12px;                        /* reduced padding */
     border-radius: 12px;
     border: 2px solid #FFD700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 15px;
 }
 
-.popup-form input:focus {
-    border-color: #000;
-}
-
-/* BUTTON */
+/* ----------------------------------------------------
+   SUBMIT BUTTON FIX
+---------------------------------------------------- */
 .submit-btn {
-    width: 100%;
+    margin-top: auto;                     /* push up into visible area */
     background: #FFD700;
-    padding: 14px;
+    padding: 12px;
     border-radius: 12px;
     border: none;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
     transition: 0.25s ease;
 }
@@ -953,40 +948,38 @@ section {
 }
 
 /* ----------------------------------------------------
-   MOBILE OPTIMIZATION (No scrolling)
+   PHONE FIXES
 ---------------------------------------------------- */
 @media (max-width: 480px) {
 
     .popup-box {
-        padding: 24px 20px;
-        max-height: 80vh;   /* fits better on small phones */
+        padding: 18px 18px;               /* tighter for small screens */
+        max-height: 90vh;                 /* more space */
     }
 
     .popup-logo {
-        width: 90px;
+        width: 80px;
     }
 
     .popup-box h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .popup-box p {
-        font-size: 14px;
-        margin-bottom: 18px;
-    }
-
-    .popup-form input {
-        font-size: 15px;
-        padding: 12px;
+        font-size: 13px;
         margin-bottom: 12px;
     }
 
+    .popup-form input {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
     .submit-btn {
+        padding: 11px;
         font-size: 16px;
-        padding: 12px;
     }
 }
-
 
 
 
@@ -1153,4 +1146,5 @@ section {
         height: 250px; /* responsive tall */
     }
 }
+
 
