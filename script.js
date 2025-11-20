@@ -101,3 +101,31 @@ setInterval(slideCards, 4000);  // change 4000 to control speed (ms)
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hero   = document.querySelector(".hero");
+    const footer = document.querySelector("footer");
+    const bar    = document.getElementById("mobileCallBtn");
+
+    if (!hero || !bar) {
+        console.error("Hero or mobileCallBtn not found in DOM!");
+        return;
+    }
+
+    function toggleMobileBar() {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const footerTop  = footer ? footer.getBoundingClientRect().top : Infinity;
+
+        // Show only if hero is fully scrolled away AND footer not reached
+        if (heroBottom < 0 && footerTop > window.innerHeight) {
+            bar.classList.add("show");
+        } else {
+            bar.classList.remove("show");
+        }
+    }
+
+    window.addEventListener("scroll", toggleMobileBar);
+    window.addEventListener("resize", toggleMobileBar);
+
+    toggleMobileBar(); // run once on load
+});
