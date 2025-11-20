@@ -1,19 +1,26 @@
 /* ============================*/
-const hamburger = document.getElementById("hamburger");
+
+
+    const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
-const navItems = document.querySelectorAll(".nav-item");
+const navItems = document.querySelectorAll(".nav-links a");
 
-// Toggle menu open/close
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+// SAFETY CHECK (avoids console errors)
+if (hamburger && navLinks) {
 
-// Close menu when any nav link is clicked
-navItems.forEach(item => {
-    item.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+    // Toggle mobile menu open/close
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
     });
-});
+
+    // Close menu when any nav item is clicked
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+}
+
 
 
 
