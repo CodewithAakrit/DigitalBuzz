@@ -29,7 +29,9 @@ section {
         padding-bottom: 40px !important;
     }
 }
-
+/* ----------------------------------------
+    HEADER
+---------------------------------------- */
 /* ----------------------------------------
     HEADER
 ---------------------------------------- */
@@ -37,7 +39,8 @@ section {
     width: 100%;
     background: #ffffff;
     border-bottom: 3px solid #FFD700;
-    position: relative;
+    position: sticky;     /* STICKY only on laptop */
+    top: 0;
     z-index: 9999;
     box-shadow: 0 2px 18px rgba(0,0,0,0.06);
     transition: 0.35s ease;
@@ -46,26 +49,24 @@ section {
 .header-container {
     max-width: 1500px;
     margin: auto;
-    padding: 18px 40px;
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 
-
 /* ----------------------------------------
     LOGO
 ---------------------------------------- */
 .logo img {
-    height: 65px;
+    height: 52px;
     transition: 0.25s ease-in-out;
 }
 
 .logo img:hover {
     transform: scale(1.04);
 }
-
 
 
 /* ----------------------------------------
@@ -94,7 +95,6 @@ section {
 }
 
 
-
 /* ----------------------------------------
     CTA BUTTON
 ---------------------------------------- */
@@ -118,7 +118,6 @@ section {
     transform: translateY(-3px) scale(1.04);
     box-shadow: 0 5px 16px rgba(255, 215, 0, 0.55);
 }
-
 
 
 /* ----------------------------------------
@@ -146,27 +145,29 @@ section {
 }
 
 
-
 /* ----------------------------------------
-    MOBILE MENU
+    MOBILE MENU + UNSTICKY HEADER
 ---------------------------------------- */
 @media (max-width: 950px) {
 
+    .header {
+        position: relative !important;   /* NOT STICKY on phone */
+        top: 0;
+    }
+
     .header-container {
-        padding: 14px 20px;
+        padding: 8px 20px;
         gap: 0;
     }
 
     .logo img {
-        height: 55px;
+        height: 48px;
     }
 
-    /* show hamburger in mobile */
     .hamburger {
         display: flex;
     }
 
-    /* mobile nav closed */
     .nav-links {
         position: absolute;
         top: 100%;
@@ -186,12 +187,10 @@ section {
         padding: 6px 0;
     }
 
-    /* mobile menu open */
     .nav-links.active {
         display: flex;
     }
 
-    /* Smaller button ONLY for mobile */
     .hero-btn {
         width: 90%;
         max-width: 320px;
@@ -200,6 +199,9 @@ section {
         border-radius: 12px;
         margin-top: 10px;
     }
+}
+.bold-line {
+    font-weight: 800;
 }
 
 /* ============================
@@ -685,15 +687,14 @@ section {
 /* -------------------------------------
    HERO SECTION (Premium Real Estate)
 -------------------------------------- */
-
 .hero {
     position: relative;
-    height: 100vh;
     width: 100%;
     background: url("images/hero.png") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 70px 0; /* reduced height instead of 100vh */
     overflow: hidden;
 }
 
@@ -726,10 +727,10 @@ section {
 /* Luxury heading */
 .hero-heading {
     font-family: "Playfair Display", serif;
-    font-size: 62px;
+    font-size: 56px; /* slightly reduced */
     font-weight: 900;
     line-height: 1.15;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 }
 
 .hero-heading span {
@@ -738,21 +739,21 @@ section {
 
 /* Subheading */
 .hero-sub {
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 19px;
+    line-height: 1.7;
     font-weight: 400;
     color: #f1f1f1;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 /* Premium CTA button */
 .hero-btn {
     display: inline-block;
-    padding: 16px 36px;
+    padding: 14px 32px;
     background: #FFD700;
     color: #000;
     border-radius: 14px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
     box-shadow: 0 6px 16px rgba(255, 215, 0, 0.45);
     transition: 0.3s;
@@ -768,18 +769,27 @@ section {
 
 /* Mobile Responsive */
 @media (max-width: 950px) {
+    .hero {
+        padding: 55px 0; /* smaller for phone */
+    }
+
     .hero-inner {
-        padding: 0 28px;
+        padding: 0 24px;
     }
+
     .hero-heading {
-        font-size: 38px;
+        font-size: 34px;
     }
+
     .hero-sub {
-        font-size: 17px;
+        font-size: 16px;
     }
+
     .hero-btn {
         width: 100%;
         text-align: center;
+        padding: 14px 0;
+        font-size: 18px;
     }
 }
 
@@ -1088,5 +1098,57 @@ section {
 
     .hyd-card img {
         height: 250px;
+    }
+}
+
+
+/* MOBILE BOTTOM CALL BUTTON */
+.mobile-call-btn {
+    position: fixed;
+    bottom: 0;                      /* Connected to the bottom */
+    left: 0;
+    width: 100%;
+    background: #FFD700;
+    padding: 14px 0;
+    text-align: center;
+    z-index: 999999;
+    border-top: 3px solid #fff;     /* Premium white border */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.mobile-call-btn.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Text + Icon */
+.mobile-call-btn a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.call-icon {
+    height: 22px;
+    width: 22px;
+    stroke: #000;
+}
+
+/* Hide on laptop */
+@media (min-width: 951px) {
+    .mobile-call-btn {
+        display: none !important;
     }
 }
